@@ -3,6 +3,7 @@
 // ==========================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
+  configurarTema();
   configurarMenuMobile();
   marcarLinkAtivo();
   configurarAnimacaoAoRolar();
@@ -11,6 +12,27 @@ document.addEventListener("DOMContentLoaded", () => {
   configurarFormularioWhatsApp();
   configurarAnoRodape();
 });
+
+/* Alterna entre modo claro e escuro e lembra a escolha (o valor inicial vem de um script no <head>) */
+function configurarTema() {
+  const botao = document.querySelector(".botao-tema");
+  if (!botao) return;
+
+  const raiz = document.documentElement;
+  const sincronizar = () => botao.setAttribute("aria-pressed", String(raiz.getAttribute("data-tema") === "escuro"));
+  sincronizar();
+
+  botao.addEventListener("click", () => {
+    const novo = raiz.getAttribute("data-tema") === "escuro" ? "claro" : "escuro";
+    raiz.setAttribute("data-tema", novo);
+    try {
+      localStorage.setItem("tema", novo);
+    } catch (erro) {
+      // armazenamento indisponível: a escolha vale só para esta visita
+    }
+    sincronizar();
+  });
+}
 
 /* Abre/fecha o menu no formato mobile */
 function configurarMenuMobile() {
