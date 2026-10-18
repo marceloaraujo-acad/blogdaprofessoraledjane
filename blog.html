@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Profª. Ledjane Leite de Araújo</title>
+  <meta name="description" content="Notícias sobre educação e coluna de opinião de Ledjane Leite de Araújo." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="cabecalho">
+    <nav class="navegacao container">
+      <a href="index.html" class="marca">Ledjane<span>.</span></a>
+      <button class="botao-menu" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="trajetoria.html">Trajetória</a></li>
+        <li><a href="apresentacao.html">Apresentação</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contato.html">Redes e Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="secao">
+      <div class="container">
+        <h1 class="titulo-secao fade-in">Blog</h1>
+        <div class="linha-destaque"></div>
+        <p class="subtitulo-secao fade-in">
+          Um espaço com duas frentes: <strong>Notícias</strong>, com fatos
+          relevantes sobre a educação nacional e internacional, e
+          <strong>Coluna</strong>, onde Ledjane Leite de Araújo compartilha
+          suas opiniões e reflexões sobre o universo da educação.
+        </p>
+
+        <div class="perfil-mini fade-in">
+          <div class="perfil-mini-foto">
+            <img src="assets/img/Foto da homenageada n. 3.jpeg" alt="Foto de Ledjane Leite de Araújo" loading="lazy" />
+          </div>
+          <div>
+            <p class="perfil-mini-nome">Ledjane Leite de Araújo</p>
+            <p class="perfil-mini-cargo">Autora da Coluna</p>
+          </div>
+        </div>
+
+        <div class="blog-filtros fade-in" role="group" aria-label="Filtrar publicações do blog">
+          <button type="button" class="filtro-blog ativo" data-filtro="todos" aria-pressed="true">Todos</button>
+          <button type="button" class="filtro-blog" data-filtro="noticia" aria-pressed="false">Notícias</button>
+          <button type="button" class="filtro-blog" data-filtro="coluna" aria-pressed="false">Coluna</button>
+        </div>
+
+        <!--
+          Para publicar um novo post:
+          1. Duplique um arquivo em blog/ (ex.: blog/coluna-silencio-quadro-negro.html)
+             e edite título, data e texto.
+          2. Duplique um bloco ".post-card" abaixo, ajuste o link, a categoria
+             (data-categoria="noticia" ou "coluna") e o resumo.
+          O site é estático (sem banco de dados), então cada post é uma
+          página HTML própria dentro da pasta blog/.
+        -->
+        <div class="grade-blog">
+          <a href="blog/coluna-silencio-quadro-negro.html" class="post-card fade-in" data-categoria="coluna">
+            <div class="post-card-conteudo">
+              <span class="post-badge post-badge-coluna">Coluna</span>
+              <h2 class="post-card-titulo">O silêncio diante do quadro-negro</h2>
+              <p class="post-card-data">18 de outubro de 2026</p>
+              <p class="post-card-resumo">
+                O envelhecimento do corpo docente e a debandada dos jovens da
+                sala de aula deixaram de ser alertas demográficos para se
+                tornarem um colapso em curso.
+              </p>
+              <span class="post-card-link">Ler coluna completa &rarr;</span>
+            </div>
+          </a>
+
+          <a href="blog/noticia-apagao-professores.html" class="post-card fade-in" data-categoria="noticia">
+            <div class="post-card-conteudo">
+              <span class="post-badge post-badge-noticia">Notícia</span>
+              <h2 class="post-card-titulo">Apagão docente: número de professores idosos mais do que dobra, e o de jovens cai 31%</h2>
+              <p class="post-card-data">16 de setembro de 2026</p>
+              <p class="post-card-resumo">
+                Pesquisa do Instituto Semesp mostra que, entre 2015 e 2025, os
+                professores com 60 anos ou mais mais do que dobraram, enquanto
+                os de até 24 anos diminuíram 31%.
+              </p>
+              <span class="post-card-link">Ler notícia completa &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Feito com <span class="coracao">&#10084;</span> em homenagem a Profª. Ledjane Leite de Araújo &mdash; <span id="ano-atual"></span></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

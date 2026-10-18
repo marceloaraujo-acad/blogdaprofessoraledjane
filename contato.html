@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redes e Contato | Profª. Ledjane Leite de Araújo</title>
+  <meta name="description" content="Redes sociais e formas de contato relacionadas a Ledjane Leite de Araújo." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="cabecalho">
+    <nav class="navegacao container">
+      <a href="index.html" class="marca">Ledjane<span>.</span></a>
+      <button class="botao-menu" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="trajetoria.html">Trajetória</a></li>
+        <li><a href="apresentacao.html">Apresentação</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contato.html">Redes e Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="secao">
+      <div class="container">
+        <h1 class="titulo-secao fade-in">Redes e Contato</h1>
+        <div class="linha-destaque"></div>
+        <p class="subtitulo-secao fade-in">
+          Acompanhe ou envie uma mensagem de carinho para Ledjane Leite de Araújo
+          pelos canais abaixo.
+        </p>
+
+        <div class="grade-contato fade-in">
+          <div class="card-rede">
+            <div class="icone">📷</div>
+            <h3>Instagram</h3>
+            <a href="https://www.instagram.com/ledjaneleitedearaujo/" target="_blank" rel="noopener">@ledjaneleitedearaujo</a>
+          </div>
+
+          <div class="card-rede">
+            <div class="icone">✉️</div>
+            <h3>E-mail</h3>
+            <a href="mailto:ledjla@gmail.com">ledjla@gmail.com</a>
+          </div>
+
+          <div class="card-rede">
+            <div class="icone">📱</div>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/5511963731047" target="_blank" rel="noopener">(11) 96373-1047</a>
+          </div>
+        </div>
+
+        <form class="formulario-contato fade-in" id="formulario-whatsapp" data-whatsapp="5511963731047">
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div class="campo">
+            <label for="email">E-mail (opcional)</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="botao">Enviar pelo WhatsApp</button>
+          <p class="formulario-aviso">Ao enviar, o WhatsApp será aberto com a sua mensagem já preenchida.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Feito com <span class="coracao">&#10084;</span> em homenagem a Profª. Ledjane Leite de Araújo &mdash; <span id="ano-atual"></span></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
